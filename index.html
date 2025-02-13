@@ -13,9 +13,9 @@
             <div class="btn-container">
 
                 <div class="btn-group">
-                    <button>Button 1</button>
-                    <p>...</p>
-                    <div class="list">
+                    <button onabort="speakWord(0)">Button 1</button>
+                    <p class="selected">...</p>
+                    <div class="list" id="list1">
                         <div class="item">The turkey</div>
                         <div class="item">The mom</div>
                         <div class="item">Dad</div>
@@ -25,9 +25,9 @@
                 </div>
 
                 <div class="btn-group">
-                    <button>Button 2</button>
-                    <p>...</p>
-                    <div class="list">
+                    <button onclick="speakWord(1)">Button 2</button>
+                    <p class="selected">...</p>
+                    <div class="list" id="list2">
                         <div class="item">Sat on</div>
                         <div class="item">Ate</div>
                         <div class="item">Danced with</div>
@@ -37,9 +37,9 @@
                 </div>
 
                 <div class="btn-group">
-                    <button>Button 3</button>
-                    <p>...</p>
-                    <div class="list">
+                    <button onclick="speakWord(2)">Button 3</button>
+                    <p class="selected">...</p>
+                    <div class="list" id="list3">
                         <div class="item">A funny</div>
                         <div class="item">A scary</div>
                         <div class="item">A goofy</div>
@@ -49,9 +49,9 @@
                 </div>
 
                 <div class="btn-group">
-                    <button>Button 4</button>
-                    <p>...</p>
-                    <div class="list">
+                    <button onclick="speakWord(3)">Button 4</button>
+                    <p class="selected">...</p>
+                    <div class="list" id="list4">
                         <div class="item">Goat</div>
                         <div class="item">Monkey</div>
                         <div class="item">Fish</div>
@@ -61,9 +61,9 @@
                 </div>
 
                 <div class="btn-group">
-                    <button>Button 5</button>
-                    <p>...</p>
-                    <div class="list">
+                    <button onclick="speakWord(4)">Button 5</button>
+                    <p class="selected">...</p>
+                    <div class="list" id="list5">
                         <div class="item">On the moon</div>
                         <div class="item">On the chair</div>
                         <div class="item">In my spaghetti</div>
@@ -74,13 +74,13 @@
             </div>
             
             <div class="bottom-btns">
-                <button>Create My Story</button>
-                <button>Reset My Story</button>
-                <button>Create Random Story</button>
+                <button onclick="createUserStory()">Create My Story</button>
+                <button onclick="resetUserStory()">Reset My Story</button>
+                <button onclick="generateRandomStory()">Create Random Story</button>
             </div>
         </div>
 
-        <p class="Story"></p>
+        <p class="Story" id="story"></p>
 
     </body>
 </html>
