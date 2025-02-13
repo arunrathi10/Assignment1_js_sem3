@@ -28,3 +28,16 @@ function createUserStory(){ // creating a function for creating user storry
     const u = new SpeechSynthesisUtterance(story);
       speechSynthesis.speak(u);
 }
+
+function resetUserStory(){ // creating the function to reset the story made by user
+    document.getElementById("story").innerText = ""; //empty the content
+
+    const selectedElemnt = document.querySelectorAll('.selected'); //getting all the slected items from the list
+
+    //using for loop to clear the selected words
+    for (let i=0; i<5; i++){
+        selectedWords[i] = "";
+        selectedElemnt[i].innerText = "...";
+        wordIndex[i] = 0;
+    }
+}
