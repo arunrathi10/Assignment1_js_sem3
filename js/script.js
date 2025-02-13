@@ -41,3 +41,16 @@ function resetUserStory(){ // creating the function to reset the story made by u
         wordIndex[i] = 0;
     }
 }
+
+function generateRandomStory(){ //creating a random story generator
+    let story = "";
+
+    //using for loop to loop through the list of words
+    for(let i = 0; i < 5; i++){
+        const words = document.querySelectorAll(`#list${i} .item`);
+        const randomIndex = Math.floor(Math.random() * words.length); //selecting a random word frm each list of words
+        story += words[randomIndex].innerText; //adding the random words to story
+    }
+    document.getElementById("story").innerText = story;
+
+}
