@@ -49,8 +49,12 @@ function generateRandomStory(){ //creating a random story generator
     for(let i = 0; i < 5; i++){
         const words = document.querySelectorAll(`#list${i} .item`);
         const randomIndex = Math.floor(Math.random() * words.length); //selecting a random word frm each list of words
-        story += words[randomIndex].innerText; //adding the random words to story
+        story += words[randomIndex].innerText + " "; //adding the random words to story
     }
     document.getElementById("story").innerText = story;
+
+    // reading aloud the story
+    const u = new SpeechSynthesisUtterance(story);
+    speechSynthesis.speak(u);
 
 }
