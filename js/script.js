@@ -19,3 +19,12 @@ function speakWord(index){ //created a function, parameter is index
         wordIndex[index] = 0;
     }
 }
+
+function createUserStory(){ // creating a function for creating user storry
+    const story = selectedWords.join(" "); //joining the words to make a sentence
+    document.getElementById("story").innerText = story; //showing the story in <p> tag
+
+    //reading aloud the story
+    const u = new SpeechSynthesisUtterance(story);
+      speechSynthesis.speak(u);
+}
